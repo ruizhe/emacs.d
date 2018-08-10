@@ -27,7 +27,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ack xcscope undo-tree tramp-term swoop switch-window swiper-helm sr-speedbar org-projectile-helm ibuffer-projectile highlight-symbol helm-projectile helm-project-persist helm-gtags helm-ag ggtags geiser counsel-tramp counsel-projectile counsel-gtags ag ace-window))))
+    (ack xcscope undo-tree tramp-term swoop switch-window swiper-helm sr-speedbar org-projectile-helm ibuffer-projectile highlight-symbol helm-projectile helm-project-persist helm-gtags helm-ag ggtags geiser ag ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
