@@ -1,16 +1,22 @@
 
-(when (>= emacs-major-version 24)
-  (require 'package)
-  (package-initialize)
-  (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-			   ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
+(require 'package)
+(package-initialize)
+(setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
+			 ("melpa" . "http://elpa.emacs-china.org/melpa/")))
 
-(when (not package-archive-contents)
-  (package-refresh-contents))
 
-(defun package-require (pkg)
+(defun zz/package-install (pkg)
+  (when (or (not package-archive-contents)
+	    (not (assoc pkg package-archive-contents)))
+    (package-refresh-contents))
   (unless (package-installed-p pkg)
-    (package-install pkg)
+    (package-install pkg)))
+  
+(defun package-require (pkg)
+  (if (package-installed-p pkg)
+      (zz/package-install pkg)
     (require pkg)))
 
-(mapcar (lambda (pkg) (package-require pkg)) package-selected-packages)
+(dolist (pkg package-selected-packages)
+  (zz/package-install pkg))
+
