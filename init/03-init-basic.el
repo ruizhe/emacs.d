@@ -6,6 +6,7 @@
 (prefer-coding-system 'gbk)
 (prefer-coding-system 'gb2312)
 (prefer-coding-system 'utf-8)
+(setq-default buffer-file-coding-system 'utf-8-unix)
 
 ;; hide toolbar
 (when (display-graphic-p)
