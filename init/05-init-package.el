@@ -1,8 +1,14 @@
 
 (require 'package)
+(setq package-archives
+      '(("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")
+	("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
+	("melpa-stalbe-cn" . "http://elpa.emacs-china.org/melpa-stable/")
+	("marmalade-cn" . "http://elpa.emacs-china.org/marmalade/")
+	("org-cn" . "http://elpa.emacs-china.org/org/")
+	("sunrise-cn" . "http://elpa.emacs-china.org/sunrise-commander/")
+	("user42" . "http://elpa.emacs-china.org/user42/")))
 (package-initialize)
-(setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-			 ("melpa" . "http://elpa.emacs-china.org/melpa/")))
 
 
 (defun zz/package-install (pkg)
