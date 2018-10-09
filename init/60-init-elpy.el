@@ -1,7 +1,7 @@
 
 (defun pyhook ()
   (package-require 'elpy)
- (elpy-enable)
+  (elpy-enable)
   (elpy-mode)
   (when (require 'flycheck nil t)
     (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
