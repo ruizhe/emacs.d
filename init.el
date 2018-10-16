@@ -1,4 +1,11 @@
 ;; -*- lexical-binding: t; -*- 
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (require 'cl-lib)
 (require 'seq)
 
@@ -27,7 +34,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (flycheck-css-colorguard flycheck-pycheckers flycheck py-autopep8 elpy material-theme magit ack xcscope undo-tree tramp-term swoop switch-window swiper-helm sr-speedbar org-projectile-helm ibuffer-projectile highlight-symbol helm-projectile helm-project-persist helm-gtags helm-ag ggtags geiser ag ace-window))))
+    (bm beacon flycheck-css-colorguard flycheck-pycheckers flycheck py-autopep8 elpy material-theme magit ack xcscope undo-tree tramp-term swoop switch-window swiper-helm sr-speedbar org-projectile-helm ibuffer-projectile highlight-symbol helm-projectile helm-project-persist helm-gtags helm-ag ggtags geiser ag ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
