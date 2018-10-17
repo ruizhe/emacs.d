@@ -28,6 +28,9 @@
 ;; don't create the backup files
 (setq make-backup-files nil)
 
+;; don't create lockfiles
+(setq create-lockfiles nil)
+
 ;; don't create the ~file
 (setq backup-by-copying nil)
 
