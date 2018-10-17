@@ -34,7 +34,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (bm beacon flycheck-css-colorguard flycheck-pycheckers flycheck py-autopep8 elpy material-theme magit ack xcscope undo-tree tramp-term swoop switch-window swiper-helm sr-speedbar org-projectile-helm ibuffer-projectile highlight-symbol helm-projectile helm-project-persist helm-gtags helm-ag ggtags geiser ag ace-window))))
+    (rainbow-delimiters bm beacon flycheck-css-colorguard flycheck-pycheckers flycheck py-autopep8 elpy material-theme magit ack xcscope undo-tree tramp-term swoop switch-window swiper-helm sr-speedbar org-projectile-helm ibuffer-projectile highlight-symbol helm-projectile helm-project-persist helm-gtags helm-ag ggtags geiser ag ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
