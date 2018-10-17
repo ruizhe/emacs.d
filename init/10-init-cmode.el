@@ -1,8 +1,36 @@
-(setq my-linux-style-path-alist (list (expand-file-name "~/src/linux")))
+
+(require 'subr-x)
+
+(defun zz/path-to-list (path)
+  (defun path-to-list (p)
+    (let* ((pp (directory-file-name (file-name-directory p))))
+      (if (or (string= pp p)
+	      (string-empty-p pp)
+	      (not pp))
+	  (list p)
+	(cons p (path-to-list pp)))))
+  (path-to-list (directory-file-name path)))
+
+
+(defun linux-src-tree-root (path)
+  (let ((linux-src-root nil))
+    (dolist (p (zz/path-to-list path))
+      (let ((name (file-name-nondirectory p)))
+	(message p)
+	(when (and (file-directory-p p)
+		   (or (string-match "linux" name)
+		       (string-match "kernel" name))
+		   (file-directory-p (concat (file-name-as-directory p) "arch"))
+		   (file-directory-p (concat (file-name-as-directory p) "kernel"))
+		   (file-directory-p (concat (file-name-as-directory p) "mm"))
+		   (file-directory-p (concat (file-name-as-directory p) "net"))
+		   (file-directory-p (concat (file-name-as-directory p) "scripts")))
+	  (setq linux-src-root p))))
+    linux-src-root))
+	     
 (add-hook 'c-mode-hook (lambda ()
-			 (dolist (path my-linux-style-path-alist)
-			   (if (string-match path (buffer-file-name))
-			       (c-set-style "linux")))))
+			 (when (linux-src-tree-root (buffer-file-name))
+			     (c-set-style "linux"))))
 
 (setq-default c-indent-tabs-mode t     ; Pressing TAB should cause indentation
               c-indent-level 4         ; A TAB is equivilent to four spaces
