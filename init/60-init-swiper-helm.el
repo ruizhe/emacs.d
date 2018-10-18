@@ -1,1 +1,2 @@
-(package-require 'swiper-helm)
+(use-package swiper-helm
+  :ensure t)

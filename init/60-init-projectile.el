@@ -1,1 +1,2 @@
-(package-require 'projectile)
+(use-package projectile
+  :ensure t)

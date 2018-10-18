@@ -1,1 +1,2 @@
-(package-require 'flycheck)
+(use-package flycheck
+  :ensure t)

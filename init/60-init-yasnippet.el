@@ -1,1 +1,2 @@
-(package-require 'yasnippet)
+(use-package yasnippet
+  :ensure t)

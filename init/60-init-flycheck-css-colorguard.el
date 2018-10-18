@@ -1,1 +1,2 @@
-(package-require 'flycheck-css-colorguard)
+(use-package flycheck-css-colorguard
+  :ensure t)

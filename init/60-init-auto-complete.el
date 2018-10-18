@@ -1,1 +1,2 @@
-(package-require 'auto-complete)
+(use-package auto-complete
+  :ensure t)

@@ -1,1 +1,2 @@
-(package-require 'swiper)
+(use-package swiper
+  :ensure t)

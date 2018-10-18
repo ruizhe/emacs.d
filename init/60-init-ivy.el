@@ -1,1 +1,2 @@
-(package-require 'ivy)
+(use-package ivy
+  :ensure t)

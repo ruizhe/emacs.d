@@ -1,1 +1,2 @@
-(package-require 'ggtags)
+(use-package ggtags
+  :ensure t)

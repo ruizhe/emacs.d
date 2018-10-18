@@ -1,1 +1,2 @@
-(package-require 'helm-ag)
+(use-package helm-ag
+  :ensure t)

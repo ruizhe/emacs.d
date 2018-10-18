@@ -1,1 +1,2 @@
-(package-require 'ag)
+(use-package ag
+  :ensure t)

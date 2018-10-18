@@ -1,3 +1,3 @@
-(package-require 'beacon)
-
-(beacon-mode t)
+(use-package beacon
+  :ensure t
+  :config (beacon-mode t))

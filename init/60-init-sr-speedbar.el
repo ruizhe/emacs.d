@@ -1,4 +1,6 @@
-(package-require 'sr-speedbar)
+(use-package sr-speedbar
+  :ensure t
+  :config
 
 (global-set-key (kbd "<f4>") 'sr-speedbar-toggle)
 (setq speedbar-use-images nil)
@@ -22,4 +24,5 @@
       (other-window 1)
       )))
 (ad-enable-advice 'delete-other-windows 'after 'my-sr-speedbar-delete-other-window-advice)
-(ad-activate 'delete-other-windows)
+(ad-activate 'delete-other-windows))
+

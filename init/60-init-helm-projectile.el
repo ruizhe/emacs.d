@@ -1,1 +1,2 @@
-(package-require 'helm-projectile)
+(use-package helm-projectile
+  :ensure t)
