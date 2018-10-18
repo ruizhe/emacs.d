@@ -1,17 +1,24 @@
+
+
+(defun sr-speedbar-hook ()
+  (let ()
+    (buffer-face-set 'speedbar-face)
+    (linum-mode nil)))
+
 (use-package sr-speedbar
   :ensure t
+  :bind (([f4] . sr-speedbar-toggle))
+  :hook (speedbar-mode . sr-speedbar-hook)
+  
+  :custom
+  (sr-speedbar-use-images nil)
   :config
 
-(global-set-key (kbd "<f4>") 'sr-speedbar-toggle)
-(setq speedbar-use-images nil)
 (sr-speedbar-open)
 (with-current-buffer sr-speedbar-buffer-name
   (setq window-size-fixed 'width))
 (sr-speedbar-close)
 (sr-speedbar-refresh-turn-off)
-(setq speedbar-mode-hook '(lambda () (let ()
-				       (buffer-face-set 'speedbar-face)
-				       (linum-mode nil))))
 (add-hook 'speedbar-before-popup-hook (lambda () (linum-mode -1)))
 
 (defadvice delete-other-windows (after
