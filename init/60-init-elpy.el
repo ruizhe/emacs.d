@@ -1,3 +1,4 @@
+(package-require 'elpy)
 
 (defun pyhook ()
   (package-require 'elpy)

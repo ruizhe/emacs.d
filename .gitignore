@@ -3,3 +3,5 @@
 /elpa*
 /server
 /session.*
+/custom.el
+

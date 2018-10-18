@@ -1,10 +1,11 @@
 ;; -*- lexical-binding: t; -*- 
 
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
 
 (require 'cl-lib)
 (require 'seq)
@@ -24,37 +25,6 @@
 	   (not (file-directory-p file)))
 	  file))
     (directory-files zz/init-dir t))))
-
-
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (rainbow-delimiters bm beacon flycheck-css-colorguard flycheck-pycheckers flycheck py-autopep8 elpy material-theme magit ack xcscope undo-tree tramp-term swoop switch-window swiper-helm sr-speedbar org-projectile-helm ibuffer-projectile highlight-symbol helm-projectile helm-project-persist helm-gtags helm-ag ggtags geiser ag ace-window))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-
-;; (defun zz/package-init-update ()
-;;   (mapcar
-;;    (lambda (pkg)
-;;      (if (not (find-if
-;; 	       (string-match (concat "^[0-9]+-init-" pkg "$") pkg)
-;; 	       (directory-files zz/init-dir)))
-;; 	 (with-current-buffer
-;; 	     (find-file-noselect (concat zz/init-dir "65-init-" pkg ".el"))
-;; 	   (insert (concat "(package-require '" pkg))
-;; 	   (save-buffer)
-;; 	   (kill-buffer))))
-;;    package-selected-packages))
-;; (zz/package-init-update)
 
 (mapcar 'load-file (seq-sort #'string< (zz/init-list)))
 

@@ -1,4 +1,5 @@
-;; sr-speedbar
+(package-require 'sr-speedbar)
+
 (global-set-key (kbd "<f4>") 'sr-speedbar-toggle)
 (setq speedbar-use-images nil)
 (sr-speedbar-open)

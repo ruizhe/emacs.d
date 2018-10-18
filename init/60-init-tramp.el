@@ -1,3 +1,4 @@
+(require 'tramp)
 
 (defconst putty-directory "C:/Users/Administrator/Desktop/lab/bin/putty")
 

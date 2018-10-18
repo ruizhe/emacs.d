@@ -43,6 +43,6 @@ If set/leave chinese-font-size to nil, it will follow englist-font-size."
 (if (display-graphic-p)
     (zhe-set-font '("Consolas" "Monaco" "DejaVu Sans Mono" "Monospace")
 		  (if (eq system-type 'windows-nt)
-		      ":pixelsize=18"
+		      ":pixelsize=14"
 		    ":pixelsize=14")
 		  '("Microsoft Yahei" "文泉驿等宽微米黑" "新宋体" "宋体")))
