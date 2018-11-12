@@ -49,3 +49,6 @@
 (setq recentf-max-menu-item 10)
 
 (defalias 'list-buffers 'ibuffer)
+
+
+(setq extended-command-suggest-shorter nil)
