@@ -40,14 +40,14 @@ If set/leave chinese-font-size to nil, it will follow englist-font-size."
       (set-fontset-font (frame-parameter nil 'font)
 			charset zh-font))))
 
-(if (display-graphic-p)
-    (zhe-set-font '("Source Code Pro"
-		    "Consolas"
-		    "Monaco" "DejaVu Sans Mono" "Monospace")
-		  (if (eq system-type 'windows-nt)
-		      ":pixelsize=14"
-		    ":pixelsize=14")
-		  '("Source Code Pro" "Microsoft Yahei" "文泉驿等宽微米黑" "新宋体" "宋体")))
+;; (if (display-graphic-p)
+;;     (zhe-set-font '("Source Code Pro"
+;; 		    "Consolas"
+;; 		    "Monaco" "DejaVu Sans Mono" "Monospace")
+;; 		  (if (eq system-type 'windows-nt)
+;; 		      ":pixelsize=14"
+;; 		    ":pixelsize=18")
+;; 		  '("Source Code Pro" "Microsoft Yahei" "文泉驿等宽微米黑" "新宋体" "宋体")))
 
 ;; (set-default-font "Source Code Pro" nil t)
 ;; (set-face-attribute 'default nil :height 100)
