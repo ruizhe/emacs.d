@@ -4,4 +4,4 @@
 /server
 /session.*
 /custom.el
-
+/projectile-bookmarks.eld
