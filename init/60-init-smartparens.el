@@ -2,5 +2,13 @@
   :ensure t
   :config (progn
 	    (require 'smartparens-config)
-	    (smartparens-global-mode 1))
+	    (smartparens-global-mode 1)
+	    (defun my-open-block-c-mode (id action context)
+	      (when (eq action 'insert)
+		(newline)
+		(newline)
+		(indent-according-to-mode)
+		(previous-line)
+		(indent-according-to-mode)))
+	    (sp-local-pair 'c-mode "{" nil :post-handlers '(:add my-open-block-c-mode)))
   )
