@@ -5,6 +5,7 @@
 	 ("C-x b" . helm-buffers-list))
   :bind (:map helm-map
 	      ("<tab>" . 'helm-execute-persistent-action)
+	      ("C-i" . 'helm-execute-persistent-action)
 	      ("C-z" . 'helm-select-action))
   :init (setq helm-M-x-fuzzy-match t
 	      helm-mode-fuzzy-match t
