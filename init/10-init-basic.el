@@ -26,6 +26,10 @@
 (when (display-graphic-p)
   (global-hl-line-mode 1))
 
+(unless window-system
+  (menu-bar-mode -1))
+
+  
 ;; don't create the ##file
 (setq auto-save-default nil)
 
