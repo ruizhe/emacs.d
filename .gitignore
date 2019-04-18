@@ -4,4 +4,5 @@
 /server
 /session.*
 /custom.el
+/tramp
 
