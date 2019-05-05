@@ -15,5 +15,5 @@
 		    )
 	      (setf rm-blacklist "")
 	      (setq sml/no-confirm-load-theme t)
-	      (sml/setup)))
-  )
+	      (sml/setup))))
+
