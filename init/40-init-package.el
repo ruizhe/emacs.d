@@ -4,7 +4,8 @@
 (defun package--save-selected-packages (&optional VALUE opt)
   nil)
 
-(setq url-proxy-services '(("http" . "devproxy.h3c.com:8080")))
+(if (string-equal user-login-name "z08941")
+    (setq url-proxy-services '(("http" . "devproxy.h3c.com:8080"))))
 
 (setq package-archives
       '(("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")
