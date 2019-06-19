@@ -6,7 +6,7 @@
 
 (setq package-archives
       '(("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")
-	("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
+	;; ("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
 	("melpa-stalbe-cn" . "http://elpa.emacs-china.org/melpa-stable/")
 	("marmalade-cn" . "http://elpa.emacs-china.org/marmalade/")
 	("org-cn" . "http://elpa.emacs-china.org/org/")
