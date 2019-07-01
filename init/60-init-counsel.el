@@ -37,4 +37,4 @@
 
 (setq ivy-display-functions-alist
       '((counsel-M-x . ivy-display-function-lv)
-        (ivy-completion-in-region . ivy-display-function-window)))
+        (ivy-completion-in-region . ivy-display-function-lv)))
