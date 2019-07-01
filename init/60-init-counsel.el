@@ -25,7 +25,8 @@
           display-buffer-below-selected)
          (window-height . ,(1+ (ivy--height (ivy-state-caller ivy-last)))))))))
 
-(require 'lv)
+(use-package lv
+  :ensure t)
 
 (defun ivy-display-function-lv (text)
   (let ((lv-force-update t))
