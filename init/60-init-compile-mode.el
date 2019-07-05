@@ -10,7 +10,7 @@
           (switch-to-buffer "*compilation*")
           (shrink-window (- h compilation-window-height)))))))
 
-(add-hook 'compilation-mode-hook 'my-compilation-hook)
+;; (add-hook 'compilation-mode-hook 'my-compilation-hook)
 
 
 (defun compilation-exit-autoclose (STATUS code msg)
