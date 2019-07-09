@@ -3,11 +3,18 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+	c-electric-brace
+	c-electric-colon
+	c-electric-paren
+	c-electric-semi&comma
+	c-electric-star
+	c-indent-line-or-region
+	electric-newline-and-maybe-indent
 	))
 
 (setq mc/cmds-to-run-once
       '(
-	swiper-mc
+	ace-window
 	hydra-multiple-cursors/ignore
 	hydra-multiple-cursors/mc/add-cursor-on-click
 	hydra-multiple-cursors/mc/mark-all-dwim
@@ -15,4 +22,5 @@
 	hydra-multiple-cursors/mc/mark-next-like-this
 	hydra-multiple-cursors/mc/mark-next-word-like-this
 	hydra-multiple-cursors/mc/mark-previous-like-this
+	swiper-mc
 	))

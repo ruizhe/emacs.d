@@ -13,3 +13,6 @@
 		(indent-according-to-mode)))
 	    (sp-local-pair 'c-mode "{" nil :post-handlers '(:add my-open-block-c-mode)))
   )
+
+(setq-default sp-escape-quotes-after-insert nil)
+
