@@ -56,8 +56,7 @@
 (recentf-mode 1)
 (setq recentf-max-menu-item 10)
 
-(defalias 'list-buffers 'ibuffer)
-
-
 (setq extended-command-suggest-shorter nil)
+
+(global-display-line-numbers-mode t)
 
