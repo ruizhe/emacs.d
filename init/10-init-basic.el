@@ -12,9 +12,8 @@
 (when (display-graphic-p)
   (tool-bar-mode 0))
 
-;; hide menubar when work in console
-(unless window-system
-  (menu-bar-mode -1))
+;; hide menubar
+(menu-bar-mode -1)
 
 ;; show (line, column) at mode-line
 (column-number-mode t)
