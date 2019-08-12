@@ -5,13 +5,10 @@
   nil)
 
 (setq package-archives
-      '(("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")
-	;; ("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
-	("melpa-stalbe-cn" . "http://elpa.emacs-china.org/melpa-stable/")
-	("marmalade-cn" . "http://elpa.emacs-china.org/marmalade/")
-	("org-cn" . "http://elpa.emacs-china.org/org/")
-	("sunrise-cn" . "http://elpa.emacs-china.org/sunrise-commander/")
-	("user42" . "http://elpa.emacs-china.org/user42/")))
+      '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+	("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+	("org"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+	))
 
 (package-initialize t) ;; 't' means don't load installed packages automatically
 (let ((default-directory (concat (file-name-directory user-emacs-directory)
